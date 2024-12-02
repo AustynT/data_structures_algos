@@ -8,7 +8,7 @@ test_cases = [
     ([], None),
 ]
 
-
+# my example for finding max number
 def find_max(lst):
     max_num = 0
 
@@ -19,8 +19,15 @@ def find_max(lst):
 
     return max_num 
 
+# the more proficient way of finding it
+def find_max_solution(lst):
+    if not lst:
+        return None
+    
+    return max(lst)
 
 find_max(test_cases[0][0])
-# for i, (lst, excepted) in enumerate(test_cases):
-#     result = find_max(lst)
-#     print(f"Test {i + 1}: {'Passed' if result == excepted else 'Failed'} - Result: {result}")
+
+for i, (lst, excepted) in enumerate(test_cases):
+    result = find_max(lst)
+    print(f"Test {i + 1}: {'Passed' if result == excepted else 'Failed'} - Result: {result}") 
